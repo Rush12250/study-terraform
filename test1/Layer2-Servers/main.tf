@@ -1,12 +1,13 @@
 
 #----------------------------------------------------------
 provider "aws" {
+  region     = "us-east-1"
 }
 
 terraform {
   backend "s3" {
     bucket = "pavlov-terraform-state"                     // Bucket where to SAVE Terraform State
-    key    = "servers/terraform.tfstate"                    // Object name in the bucket to SAVE Terraform State
+    key    = "servers/terraform.tfstate"                  // Object name in the bucket to SAVE Terraform State
     region = "us-east-1"                                  // Region where bucket created
   }
 }

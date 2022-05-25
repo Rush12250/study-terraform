@@ -4,3 +4,4 @@
 .terraform
 terraform.tfstate*
 .terraform.lock.hcl
+provider.tf
